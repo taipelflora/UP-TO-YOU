@@ -1,0 +1,1475 @@
+/* 基本設置 */
+:root {
+  --primary-color: #C3E8D5;
+  --primary-hover: #F6DDD7;
+  --secondary-color: #A9D2BD;
+  --accent-color: #F6DDD7;
+  --text-color: #1f2937;
+  --text-light: #6b7280;
+  --background-color: #ffffff;
+  --background-muted: #f9fafb;
+  --border-color: #e5e7eb;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --radius: 0.5rem;
+  --transition: all 0.3s ease;
+  --container-width: 1200px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+  background-color: var(--background-color);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--primary-hover);
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* 按鈕樣式 */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+  border: none;
+}
+
+.btn-primary {
+  background-color: #C3E8D5; /* 改成你要的綠色 */
+  color: #1f2937; /* 字體顏色深灰，不要白字在淺色上很難看 */
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: white;
+  color: #1f2937;
+}
+
+.btn-outline {
+  background-color: #FFEEEE;
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+}
+
+.btn-outline:hover {
+  background-color: var(--background-muted);
+  color: var(--text-color);
+}
+
+.btn-sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+/* 頁首樣式 */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color:#C3E8D5;
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4rem;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.mini-tarot-reading {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+/*.main-nav ul {
+  display: flex;
+  gap: 2rem;
+}
+
+.main-nav a {
+  color: var(--text-color);
+  font-weight: 500;
+}*/
+
+.main-nav ul {
+  display: flex;
+  align-items: center; /* 垂直置中 */
+  gap: 10px; /* 按鈕之間的距離 */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav ul li a { 
+  display: inline-block;
+  padding: 8px 16px;
+  margin: 5px 0;
+  border-radius: 20px;
+  background-color: #FFEEEE;
+  color: #333; /* 改成深色字，跟右邊一樣 */
+  font-weight: bold; /* 字體加粗，跟右邊一樣 */
+  text-decoration: none;
+  transition: all 0.3s ease;
+
+
+  /*display: inline-block; 每個按鈕自己是inline-block，不是flex 
+  padding: 8px 16px;
+  margin: 5px 0; /* 上下5px，左右靠gap控制 
+  /*border: 2px solid #f4c2c2; /* 粉紅色的邊框 
+  border-radius: 20px; /* 圓角 
+  color: #333;
+  text-decoration: bold;
+  background-color:#FFEEEE ;
+  transition: all 0.3s ease;
+  */
+
+  
+}
+
+.main-nav ul li a:hover {
+  background-color: #e1dede; /* 滑鼠移過去，填滿粉紅 */
+  color: white;
+}
+ㄅ
+.main-nav a:hover,
+.main-nav a.active {
+  color: #A9D2BD; /* 主色系，點到或hover時字變色 */
+}
+
+
+#mini-reading-btn {    /* 抽一張牌 */
+  padding: 8px 16px;
+  border-radius: 20px;
+  background-color: #FFEEEE;
+  color: #333;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+#mini-reading-btn:hover {
+  background-color: #f4c2c2;
+  color: white;
+}
+
+
+
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 2rem;
+  height: 1.5rem;
+  position: relative;
+}
+
+.mobile-menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--text-color);
+  position: absolute;
+  left: 0;
+  transition: var(--transition);
+}
+
+.mobile-menu-toggle span:nth-child(1) {
+  top: 0;
+}
+
+.mobile-menu-toggle span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.mobile-menu-toggle span:nth-child(3) {
+  bottom: 0;
+}
+
+.menu-open .mobile-menu-toggle span:nth-child(1) {
+  transform: translateY(0.75rem) rotate(45deg);
+}
+
+.menu-open .mobile-menu-toggle span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-open .mobile-menu-toggle span:nth-child(3) {
+  transform: translateY(-0.75rem) rotate(-45deg);
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 4rem;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 4rem);
+  background-color: var(--background-color);
+  z-index: 99;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.menu-open .mobile-menu {
+  display: block;
+}
+
+.mobile-menu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mobile-menu a {
+  display: block;
+  padding: 0.75rem;
+  border-radius: var(--radius);
+}
+
+.mobile-menu a:hover,
+.mobile-menu a.active {
+  background-color: var(--background-muted);
+  color: var(--primary-color);
+}
+
+.has-submenu .submenu {
+  display: none;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+}
+
+.submenu-open .submenu {
+  display: block;
+}
+
+.submenu-toggle {
+  position: relative;
+}
+
+.submenu-toggle::after {
+  content: "";
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  margin-left: 0.5rem;
+  transition: var(--transition);
+}
+
+.submenu-open .submenu-toggle::after {
+  transform: rotate(-135deg);
+}
+
+/* 頁尾樣式 */
+.site-footer {
+    background-color: #F6DDD7; /* 淺粉紅背景 */
+    border-top: 1px solid transparent;
+    border-image: linear-gradient(to right, #e0c3fc, #8ec5fc);
+    border-image-slice: 1;
+    padding: 2rem 0;
+    text-align: center;
+    color: #333;
+}
+
+/* 首頁樣式 */
+.hero {
+  padding: 4rem 0;
+  background-color: #F6DDD7; /* 粉紅色 */
+  background-image: none; /* 把原本漸層徹底取消！ */
+  }
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  color: #000000;
+  max-width: 36rem;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image img {
+  border-radius: var(--radius);
+  box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.section-header p {
+  color: var(--text-light);
+  max-width: 36rem;
+  margin: 0 auto;
+}
+
+.featured-cards,
+.tarot-history {
+  padding: 4rem 0;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.card-item {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 4px 6px var(--shadow-color);
+  transition: var(--transition);
+}
+
+.card-item:hover {
+  transform: translateY(-0.25rem);
+  box-shadow: 0 10px 15px var(--shadow-color);
+}
+
+.card-image {
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.card-item:hover .card-image img {
+  transform: scale(1.05);
+}
+
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  color: white;
+}
+
+.section-footer {
+  text-align: center;
+}
+
+.two-columns {
+  background-color: #C3E8D5; /* 淺綠色 */
+  padding: 2rem; /* 要有padding，不然字會貼邊很醜 */
+  border-radius: var(--radius); /* 可有可無，讓區塊圓角 */
+  display: grid;
+  gap: 2rem;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.feature-list {
+  margin: 1rem 0;
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
+.feature-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.feature-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+}
+
+/* 頁面標題 */
+.page-header {
+  padding: 3rem 0;
+  text-align: center;
+  background:  #F6DDD7;
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.page-header p {
+  color: var(--text-light);
+  max-width: 36rem;
+  margin: 0 auto;
+}
+
+/* 關於我們頁面 */
+.about-mission,
+.team,
+.contact {
+  padding: 4rem 0;
+}
+
+.rounded-image {
+  border-radius: var(--radius);
+  box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align:center;
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  background-color: #F6DDD7; /* 粉紅色！！！ */
+}
+
+
+
+
+.member-role {
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+}
+
+.member-bio {
+  font-size: 0.875rem;
+  color: var(--text-light);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.contact-item {
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: var(--background-muted);
+  color: var(--text-color);
+  transition: var(--transition);
+}
+
+.social-icon:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* 塔羅介紹頁面 */
+.tarot-origin,
+.tarot-structure,
+.tarot-reading,
+.tarot-symbols {
+  padding: 4rem 0;
+}
+
+.card-types {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card-type {
+  padding: 2rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+}
+
+.card-type h3 {
+  margin-bottom: 1rem;
+}
+
+.card-type .btn {
+  margin-top: 1.5rem;
+}
+
+.reading-methods {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.reading-method {
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+}
+
+.symbols-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.symbol-item {
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+}
+
+.cta {
+  padding: 4rem 0;
+  text-align: center;
+  background: linear-gradient(to bottom, rgba(107, 33, 168, 0.05), rgba(139, 92, 246, 0.05));
+}
+
+.cta h2 {
+  margin-bottom: 1.5rem;
+}
+
+/* 塔羅牌義頁面 */
+.major-arcana {
+  padding: 4rem 0;
+}
+
+.tarot-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.tarot-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.tarot-card:hover {
+  transform: translateY(-0.25rem);
+  box-shadow: 0 10px 15px var(--shadow-color);
+  border-color: var(--primary-color);
+}
+
+.tarot-card .card-image {
+  aspect-ratio: 3 / 4;
+}
+
+.tarot-card .card-info {
+  padding: 1rem;
+}
+
+.tarot-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.tarot-card p {
+  font-size: 0.875rem;
+  color: var(--text-light);
+}
+
+/* 單張塔羅牌頁面 */
+.card-header {
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.card-header h1 {
+  position: relative;
+  display: inline-block;
+}
+
+.card-header h1::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+  border-radius: 3px;
+}
+
+.card-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.spacer {
+  width: 6rem;
+}
+
+.card-details {
+  padding: 4rem 0;
+}
+
+.card-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+.card-image-container {
+  display: flex;
+  width: 300px;
+  height: 650px;
+  justify-content: center;
+}
+
+.card-large-image {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.5s ease;
+}
+
+.card-large-image:hover {
+  transform: scale(1.03) rotate(1deg);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card-section h2 {
+  margin-bottom: 1rem;
+}
+
+.card-meanings {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.card-meaning {
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+}
+
+.card-meaning h3 {
+  margin-bottom: 0.5rem;
+}
+
+.upright h3 {
+  color: #16a34a;
+}
+
+.reversed h3 {
+  color: #dc2626;
+}
+
+/* 新增關聯與連結部分的樣式 */
+.card-associations {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.association-item {
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.association-item:hover {
+  background-color: var(--background-muted);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.association-item h3 {
+  font-size: 0.9rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.association-item p {
+  font-size: 1rem;
+}
+
+.card-navigation-bottom {
+  padding: 2rem 0 4rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.arrow-left,
+.arrow-right {
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-top: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+}
+
+.arrow-left {
+  transform: rotate(-135deg);
+  margin-right: 0.5rem;
+}
+
+.arrow-right {
+  transform: rotate(45deg);
+  margin-left: 0.5rem;
+}
+
+/* 響應式設計 */
+@media (min-width: 768px) {
+  .hero-content {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .hero-text {
+    flex: 1;
+  }
+
+  .two-columns {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card-types {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .reading-methods {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card-layout {
+    grid-template-columns: 300px 1fr;
+  }
+
+  .card-meanings {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .main-nav {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .section-header h2 {
+    font-size: 1.75rem;
+  }
+
+  .page-header h1 {
+    font-size: 2rem;
+  }
+
+  .mini-tarot-reading {
+    display: none;
+  }
+}
+
+/* 動畫效果 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-text,
+.hero-image,
+.section-header,
+.cards-grid,
+.team-grid,
+.tarot-cards-grid {
+  animation: fadeIn 0.8s ease-out;
+}
+
+/* CSS3 特效 */
+.card-item {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn {
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #C3E8D5; /* 改成你要的綠色 */
+  color: #1f2937; /* 字體顏色深灰，不要白字在淺色上很難看 */
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.card-large-image {
+  transition: transform 0.5s ease;
+}
+
+.card-large-image:hover {
+  transform: scale(1.02);
+}
+
+.social-icon {
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 更多CSS3特效 */
+.tarot-card {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  backface-visibility: hidden;
+}
+
+.tarot-card:hover {
+  transform: translateY(-5px) rotateZ(1deg);
+}
+
+.tarot-card .card-image img {
+  transition: transform 0.5s ease;
+}
+
+.tarot-card:hover .card-image img {
+  transform: scale(1.05);
+}
+
+.page-header {
+  position: relative;
+  overflow: hidden;
+}
+
+.page-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
+  z-index: -1;
+}
+
+.site-header {
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* 添加隨機塔羅牌展示的樣式 */
+.random-card-container {
+  position: relative;
+  width: 300px;
+  max-width: 100%;
+  transition: all 0.5s ease;
+}
+
+.random-card {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.random-card:hover {
+  transform: translateY(-10px) rotate(2deg);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.tarot-display-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.random-card:hover .tarot-display-image {
+  transform: scale(1.05);
+}
+
+.card-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  font-weight: 500;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+}
+
+.random-card:hover .card-caption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 添加卡片翻轉動畫效果 */
+@keyframes cardFlip {
+  0% {
+    transform: rotateY(90deg) scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateY(0deg) scale(1);
+    opacity: 1;
+  }
+}
+
+.random-card {
+  animation: cardFlip 0.8s ease-out forwards;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+/* 塔羅牌抽排系統樣式 */
+.tarot-reading-container {
+  width: 100%;
+  max-width: 400px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid var(--border-color);
+}
+
+.tarot-reading-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.75rem;
+}
+
+.tarot-reading-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #f7bfb1;
+  font-weight: 600;
+}
+
+.reading-controls {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.spread-selector {
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  font-size: 0.875rem;
+  background-color: white;
+  color: var(--text-color);
+  font-family: inherit;
+}
+
+.reading-description {
+  font-size: 0.875rem;
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+  padding: 0.75rem;
+  background-color: var(--background-muted);
+  border-radius: var(--radius);
+  line-height: 1.5;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+  min-height: 180px;
+  perspective: 1000px;
+  flex-wrap: wrap;
+}
+
+.tarot-card-slot {
+  position: relative;
+  width: 100px;
+  height: 150px;
+  border-radius: var(--radius);
+  background-color:  #F6DDD7;
+  border: 1px dashed #f4c2c2; /* 邊框顏色也順便改成粉紅，自己看要不要 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-light);
+  font-size: 0.75rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.tarot-card-slot.filled {
+  border: none;
+  background-color: transparent;
+}
+
+.tarot-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+}
+
+.tarot-card.reversed {
+  transform: rotateZ(180deg);
+}
+
+.tarot-card-front,
+.tarot-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.tarot-card-back {
+  background: linear-gradient(135deg, #6b21a8, #4c1d95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(180deg);
+}
+
+.tarot-card-back::after {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  background-image: url("../images/tarot-back.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.8;
+  border-radius: calc(var(--radius) - 2px);
+}
+
+.tarot-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tarot-card-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  color: white;
+  padding: 0.5rem;
+  font-size: 0.75rem;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+}
+
+.tarot-card:hover .tarot-card-label {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tarot-card.flipped {
+  transform: rotateY(180deg);
+}
+
+.tarot-card.reversed.flipped {
+  transform: rotateY(180deg) rotateZ(180deg);
+}
+
+.slot-label {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #99d3b5;
+  font-weight: 500;
+}
+
+.reading-interpretation {
+  margin-top: 1.5rem;
+  font-size: 0.875rem;
+  color: var(--text-color);
+  background-color: var(--background-muted);
+  border-radius: var(--radius);
+  padding: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.reading-interpretation.show {
+  max-height: 500px;
+  opacity: 1;
+}
+
+.card-meaning {
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.card-meaning:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.card-meaning h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.card-meaning h4 .card-position {
+  color: #A9D2BD;
+  margin-right: 0.25rem;
+  font-weight: 600;
+}
+
+.card-meaning h4 .card-name {
+  font-weight: 500;
+}
+
+.card-meaning h4 .card-orientation {
+  font-size: 0.75rem;
+  margin-left: 0.5rem;
+  padding: 0.125rem 0.375rem;
+  border-radius: 1rem;
+}
+
+.card-meaning h4 .upright {
+  background-color: rgba(22, 163, 74, 0.1);
+  color: #16a34a;
+}
+
+.card-meaning h4 .reversed {
+  background-color: rgba(220, 38, 38, 0.1);
+  color: #dc2626;
+}
+
+.card-meaning p {
+  margin: 0.5rem 0;
+  font-size: 0.85rem;
+  color: var(--text-light);
+  line-height: 1.5;
+}
+
+@keyframes cardDraw {
+  0% {
+    transform: translateY(50px) scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.tarot-card {
+  animation: cardDraw 0.5s ease-out forwards;
+}
+
+@media (max-width: 767px) {
+  .tarot-reading-container {
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .tarot-reading-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .reading-controls {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .cards-container {
+    gap: 1rem;
+  }
+
+  .tarot-card-slot {
+    width: 80px;
+    height: 120px;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* 圖片和文字的間距 */
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.logo-img {
+  height: 80px; /* Logo圖片高度，看需要自己調 */
+}
+
+.member-description {
+  width: 100%;
+  margin-top: 0.5rem;
+  text-align: left; /* 這是讓整塊描述靠左 */
+}
+
+.member-bio {
+  text-align: left; /* 這是讓內文也靠左 */
+  margin-top: 0.5rem;
+}
+
+
+.logo-image { /* Logo圖片高度，塔羅介紹*/
+  height: 80px;
+  width: auto;
+}
+
+.card-type, 
+.reading-method, 
+.symbol-item {
+    background-color: #C3E8D5; /* 淺綠色 */
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.card-type:hover, 
+.reading-method:hover, 
+.symbol-item:hover {
+    background-color: #FFEEEE; /* hover時再深一點的綠色 */
+}
+
+.cta {
+    background-color: #F6DDD7; /* 淺粉紅色 */
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.cta h2 {
+    margin-bottom: 1.5rem;
+}
+
+.cta .btn-primary {
+    margin-top: 1rem;
+}
+
+/* 卡片 hover 放大特效 */
+.card-item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+}
+
+.card-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+}
+
+.card-image {
+  transition: transform 0.3s ease;
+}
+
+.card-item:hover .card-image {
+  transform: scale(1.08);
+}
+
+/* Footer Links - default white, hover black */
+.site-footer .footer-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.site-footer .footer-links a:hover {
+  color: black;
+}

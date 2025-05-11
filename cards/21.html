@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>世界 - 塔羅牌義 - UP兔YOU</title>
+    <meta name="description" content="探索塔羅牌世界的象徵意義和解讀方法。">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="../index.html" class="logo">UP兔YOU</a>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="../about.html">關於我們</a></li>
+                        <li><a href="../tarot-introduction.html">塔羅介紹</a></li>
+                        <li><a href="../tarot-meanings.html" class="active">塔羅牌義</a></li>
+                    </ul>
+                </nav>
+                <button class="mobile-menu-toggle" aria-label="打開選單">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="card-header">
+            <div class="container">
+                <div class="card-navigation">
+                    <a href="../tarot-meanings.html" class="btn btn-outline btn-sm">返回塔羅牌列表</a>
+                    <h1>21. 世界 (The World)</h1>
+                    <div class="spacer"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card-details">
+            <div class="container">
+                <div class="card-layout">
+                    <div class="card-image-container">
+                        <img src="/images/21world.jpg" alt="世界" class="card-large-image">
+                    </div>
+
+                    <div class="card-content">
+                        <div class="card-section">
+                            <h2>牌義概述</h2>
+                            <p>世界象徵圓滿、成就與整合。這是旅程的終點，也是新旅程的起點。</p>
+                        </div>
+
+                        <div class="card-meanings">
+                            <div class="card-meaning upright">
+                                <h3>正位牌義</h3>
+                                <p>完成、成就、和諧、統一、新的開始。</p>
+                                <p>正位的世界代表你成功達成目標，並準備迎接更高層次的挑戰。</p>
+                            </div>
+
+                            <div class="card-meaning reversed">
+                                <h3>逆位牌義</h3>
+                                <p>未完成的循環、延遲、缺乏結束感。</p>
+                                <p>逆位的世界提醒你，有些事需要更努力才能真正完成。</p>
+                            </div>
+                        </div>
+
+                        <div class="card-section">
+                            <h2>象徵意義</h2>
+                            <p>舞動於月桂花環中的人物，四角守護獸代表四個元素與四個方位，象徵完整與平衡。</p>
+                        </div>
+
+                        <div class="card-section">
+                            <h2>解讀建議</h2>
+                            <ul class="feature-list">
+                                <li>慶祝你的成就</li>
+                                <li>感謝旅途上的每一個學習</li>
+                                <li>整合所有經驗，準備開啟新章</li>
+                                <li>相信自己已經準備好迎向更高層次</li>
+                            </ul>
+                        </div>
+
+                        <div class="card-section">
+                            <h2>關聯與連結</h2>
+                            <div class="card-associations">
+                                <div class="association-item">
+                                    <h3>元素</h3>
+                                    <p>地</p>
+                                </div>
+                                <div class="association-item">
+                                    <h3>行星</h3>
+                                    <p>土星</p>
+                                </div>
+                                <div class="association-item">
+                                    <h3>數字</h3>
+                                    <p>21 - 完成、整合、成就</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card-navigation-bottom">
+            <div class="container">
+                <div class="navigation-buttons">
+                    <a href="20.html" class="btn btn-outline">
+                        <span class="arrow-left"></span>
+                        審判
+                    </a>
+                    <a href="../tarot-meanings.html" class="btn btn-outline">
+                        返回列表
+                        <span class="arrow-right"></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; <span id="current-year">2025</span> UP兔YOU. 版權所有.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+            document.body.classList.toggle('menu-open');
+        });
+        document.querySelectorAll('.submenu-toggle').forEach(function(toggle) {
+            toggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                this.parentNode.classList.toggle('submenu-open');
+            });
+        });
+    </script>
+</body>
+</html>

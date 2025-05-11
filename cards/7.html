@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>戰車 - 塔羅牌義 - UP兔YOU</title>
+    <meta name="description" content="探索塔羅牌戰車的象徵意義和解讀方法。">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="../index.html" class="logo">UP兔YOU</a>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="../about.html">關於我們</a></li>
+                        <li><a href="../tarot-introduction.html">塔羅介紹</a></li>
+                        <li><a href="../tarot-meanings.html" class="active">塔羅牌義</a></li>
+                    </ul>
+                </nav>
+                <button class="mobile-menu-toggle" aria-label="打開選單">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="card-header">
+            <div class="container">
+                <div class="card-navigation">
+                    <a href="../tarot-meanings.html" class="btn btn-outline btn-sm">返回塔羅牌列表</a>
+                    <h1>7. 戰車 (The Chariot)</h1>
+                    <div class="spacer"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card-details">
+            <div class="container">
+                <div class="card-layout">
+                    <div class="card-image-container">
+                        <img src="/images/07chariot.jpg" alt="戰車" class="card-large-image">
+                    </div>
+
+                    <div class="card-content">
+                        <div class="card-section">
+                            <h2>牌義概述</h2>
+                            <p>戰車象徵意志力、決心與勝利。它代表透過紀律與控制力，在競爭或挑戰中達成目標。</p>
+                        </div>
+
+                        <div class="card-meanings">
+                            <div class="card-meaning upright">
+                                <h3>正位牌義</h3>
+                                <p>勝利、意志力、掌控、行動力、紀律、自信。</p>
+                                <p>正位的戰車代表你正積極掌控局勢，朝著目標邁進，並具備戰勝困難的能力。</p>
+                            </div>
+
+                            <div class="card-meaning reversed">
+                                <h3>逆位牌義</h3>
+                                <p>失控、缺乏方向、衝動、固執、停滯不前。</p>
+                                <p>逆位的戰車警示你可能正在失去對局勢的掌控，或被過度的衝動牽著走。</p>
+                            </div>
+                        </div>
+
+                        <div class="card-section">
+                            <h2>象徵意義</h2>
+                            <p>戰車通常描繪一位戰士駕駛戰車，車前有兩頭斯芬克斯或馬象徵對立力量的整合與控制。</p>
+                        </div>
+
+                        <div class="card-section">
+                            <h2>解讀建議</h2>
+                            <ul class="feature-list">
+                                <li>保持目標導向與紀律</li>
+                                <li>克服內外在阻力</li>
+                                <li>不要被情緒驅使</li>
+                                <li>善用意志力創造成功</li>
+                            </ul>
+                        </div>
+
+                        <div class="card-section">
+                            <h2>關聯與連結</h2>
+                            <div class="card-associations">
+                                <div class="association-item">
+                                    <h3>元素</h3>
+                                    <p>水</p>
+                                </div>
+                                <div class="association-item">
+                                    <h3>星座</h3>
+                                    <p>巨蟹座</p>
+                                </div>
+                                <div class="association-item">
+                                    <h3>數字</h3>
+                                    <p>7 - 勝利、掌控、行動</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card-navigation-bottom">
+            <div class="container">
+                <div class="navigation-buttons">
+                    <a href="6.html" class="btn btn-outline">
+                        <span class="arrow-left"></span>
+                        戀人
+                    </a>
+                    <a href="8.html" class="btn btn-outline">
+                        力量
+                        <span class="arrow-right"></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; <span id="current-year">2025</span> UP兔YOU. 版權所有.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+            document.body.classList.toggle('menu-open');
+        });
+        document.querySelectorAll('.submenu-toggle').forEach(function(toggle) {
+            toggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                this.parentNode.classList.toggle('submenu-open');
+            });
+        });
+    </script>
+</body>
+</html>

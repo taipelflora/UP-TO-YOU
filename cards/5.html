@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>教皇 - 塔羅牌義 - UP兔YOU</title>
+    <meta name="description" content="探索塔羅牌教皇的象徵意義和解讀方法。">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="../index.html" class="logo">UP兔YOU</a>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="../about.html">關於我們</a></li>
+                        <li><a href="../tarot-introduction.html">塔羅介紹</a></li>
+                        <li><a href="../tarot-meanings.html" class="active">塔羅牌義</a></li>
+                    </ul>
+                </nav>
+                <button class="mobile-menu-toggle" aria-label="打開選單">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="card-header">
+            <div class="container">
+                <div class="card-navigation">
+                    <a href="../tarot-meanings.html" class="btn btn-outline btn-sm">返回塔羅牌列表</a>
+                    <h1>5. 教皇 (The Hierophant)</h1>
+                    <div class="spacer"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card-details">
+            <div class="container">
+                <div class="card-layout">
+                    <div class="card-image-container">
+                        <img src="/images/05hierophant.jpg" alt="教皇" class="card-large-image">
+                    </div>
+
+                    <div class="card-content">
+                        <div class="card-section">
+                            <h2>牌義概述</h2>
+                            <p>教皇代表傳統、宗教、指導和社會規範。他是知識和精神智慧的橋樑，連接人與神聖之間的界線。</p>
+                        </div>
+
+                        <div class="card-meanings">
+                            <div class="card-meaning upright">
+                                <h3>正位牌義</h3>
+                                <p>傳統、精神指導、信仰、教育、儀式、文化價值、道德規範。</p>
+                                <p>正位的教皇顯示你可能正在尋求精神上的引導或回歸某種形式的傳統智慧。</p>
+                            </div>
+
+                            <div class="card-meaning reversed">
+                                <h3>逆位牌義</h3>
+                                <p>反叛、非傳統、個人信仰、精神困惑、挑戰權威。</p>
+                                <p>逆位的教皇可能暗示你正在質疑傳統的信仰體系或面臨與權威意見相左的困境。</p>
+                            </div>
+                        </div>
+
+                        <div class="card-section">
+                            <h2>象徵意義</h2>
+                            <p>教皇通常坐在寶座上，雙手持杖或做祝福手勢，旁有兩名信徒象徵傳授教義。他的寶座常與宗教符號連結。</p>
+                        </div>
+
+                        <div class="card-section">
+                            <h2>解讀建議</h2>
+                            <ul class="feature-list">
+                                <li>尋求精神導師或顧問</li>
+                                <li>遵循傳統規範可能帶來安定</li>
+                                <li>加入學習或精神團體</li>
+                                <li>重新評估信仰體系</li>
+                            </ul>
+                        </div>
+
+                        <div class="card-section">
+                            <h2>關聯與連結</h2>
+                            <div class="card-associations">
+                                <div class="association-item">
+                                    <h3>元素</h3>
+                                    <p>土</p>
+                                </div>
+                                <div class="association-item">
+                                    <h3>星座</h3>
+                                    <p>金牛座</p>
+                                </div>
+                                <div class="association-item">
+                                    <h3>數字</h3>
+                                    <p>5 - 教導、穩定、制度</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card-navigation-bottom">
+            <div class="container">
+                <div class="navigation-buttons">
+                    <a href="4.html" class="btn btn-outline">
+                        <span class="arrow-left"></span>
+                        皇帝
+                    </a>
+                    <a href="6.html" class="btn btn-outline">
+                        戀人
+                        <span class="arrow-right"></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; <span id="current-year">2025</span> UP兔YOU. 版權所有.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+            document.body.classList.toggle('menu-open');
+        });
+        document.querySelectorAll('.submenu-toggle').forEach(function(toggle) {
+            toggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                this.parentNode.classList.toggle('submenu-open');
+            });
+        });
+    </script>
+</body>
+</html>

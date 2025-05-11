@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>力量 - 塔羅牌義 - UP兔YOU</title>
+    <meta name="description" content="探索塔羅牌力量的象徵意義和解讀方法。">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="../index.html" class="logo">UP兔YOU</a>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="../about.html">關於我們</a></li>
+                        <li><a href="../tarot-introduction.html">塔羅介紹</a></li>
+                        <li><a href="../tarot-meanings.html" class="active">塔羅牌義</a></li>
+                    </ul>
+                </nav>
+                <button class="mobile-menu-toggle" aria-label="打開選單">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="card-header">
+            <div class="container">
+                <div class="card-navigation">
+                    <a href="../tarot-meanings.html" class="btn btn-outline btn-sm">返回塔羅牌列表</a>
+                    <h1>8. 力量 (Strength)</h1>
+                    <div class="spacer"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card-details">
+            <div class="container">
+                <div class="card-layout">
+                    <div class="card-image-container">
+                        <img src="/images/08strength.jpg" alt="力量" class="card-large-image">
+                    </div>
+
+                    <div class="card-content">
+                        <div class="card-section">
+                            <h2>牌義概述</h2>
+                            <p>力量象徵內在的勇氣、耐心與溫柔的掌控。這張牌代表面對困難時內在力量的展現。</p>
+                        </div>
+
+                        <div class="card-meanings">
+                            <div class="card-meaning upright">
+                                <h3>正位牌義</h3>
+                                <p>勇氣、耐心、自我掌控、信心、柔中帶剛。</p>
+                                <p>正位的力量牌顯示你擁有內在穩定的力量，能以溫和的方式處理挑戰與困難。</p>
+                            </div>
+
+                            <div class="card-meaning reversed">
+                                <h3>逆位牌義</h3>
+                                <p>懷疑、自卑、焦慮、缺乏控制、易怒。</p>
+                                <p>逆位的力量牌提醒你面對恐懼與焦慮時，需重新連結你的內在力量與自信。</p>
+                            </div>
+                        </div>
+
+                        <div class="card-section">
+                            <h2>象徵意義</h2>
+                            <p>力量牌通常描繪一位女子溫柔地馴服一頭獅子，象徵溫柔的力量能戰勝原始的本能。</p>
+                        </div>
+
+                        <div class="card-section">
+                            <h2>解讀建議</h2>
+                            <ul class="feature-list">
+                                <li>堅定內心信念</li>
+                                <li>以柔克剛的處事方式</li>
+                                <li>面對壓力時保持冷靜</li>
+                                <li>學習掌控情緒與恐懼</li>
+                            </ul>
+                        </div>
+
+                        <div class="card-section">
+                            <h2>關聯與連結</h2>
+                            <div class="card-associations">
+                                <div class="association-item">
+                                    <h3>元素</h3>
+                                    <p>火</p>
+                                </div>
+                                <div class="association-item">
+                                    <h3>星座</h3>
+                                    <p>獅子座</p>
+                                </div>
+                                <div class="association-item">
+                                    <h3>數字</h3>
+                                    <p>8 - 力量、掌控、毅力</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card-navigation-bottom">
+            <div class="container">
+                <div class="navigation-buttons">
+                    <a href="7.html" class="btn btn-outline">
+                        <span class="arrow-left"></span>
+                        戰車
+                    </a>
+                    <a href="9.html" class="btn btn-outline">
+                        隱者
+                        <span class="arrow-right"></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; <span id="current-year">2025</span> UP兔YOU. 版權所有.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+            document.body.classList.toggle('menu-open');
+        });
+        document.querySelectorAll('.submenu-toggle').forEach(function(toggle) {
+            toggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                this.parentNode.classList.toggle('submenu-open');
+            });
+        });
+    </script>
+</body>
+</html>

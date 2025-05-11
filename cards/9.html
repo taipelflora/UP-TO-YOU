@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>隱者 - 塔羅牌義 - UP兔YOU</title>
+    <meta name="description" content="探索塔羅牌隱者的象徵意義和解讀方法。">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="../index.html" class="logo">UP兔YOU</a>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="../about.html">關於我們</a></li>
+                        <li><a href="../tarot-introduction.html">塔羅介紹</a></li>
+                        <li><a href="../tarot-meanings.html" class="active">塔羅牌義</a></li>
+                    </ul>
+                </nav>
+                <button class="mobile-menu-toggle" aria-label="打開選單">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="card-header">
+            <div class="container">
+                <div class="card-navigation">
+                    <a href="../tarot-meanings.html" class="btn btn-outline btn-sm">返回塔羅牌列表</a>
+                    <h1>9. 隱者 (The Hermit)</h1>
+                    <div class="spacer"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card-details">
+            <div class="container">
+                <div class="card-layout">
+                    <div class="card-image-container">
+                        <img src="/images/09hermit.jpg" alt="隱者" class="card-large-image">
+                    </div>
+
+                    <div class="card-content">
+                        <div class="card-section">
+                            <h2>牌義概述</h2>
+                            <p>隱者象徵內省、智慧與靜思。這張牌鼓勵你獨處並深入探索自己的內心世界，尋求真理與指引。</p>
+                        </div>
+
+                        <div class="card-meanings">
+                            <div class="card-meaning upright">
+                                <h3>正位牌義</h3>
+                                <p>內省、沉思、靈性探索、孤獨、自我覺察。</p>
+                                <p>正位的隱者表示現在是一段需要靜心、深入思考與靈性成長的時期。</p>
+                            </div>
+
+                            <div class="card-meaning reversed">
+                                <h3>逆位牌義</h3>
+                                <p>逃避、孤立、與世隔絕、誤入歧途。</p>
+                                <p>逆位的隱者暗示你可能太過封閉、拒絕與他人連結，或是過度沉迷於個人世界中。</p>
+                            </div>
+                        </div>
+
+                        <div class="card-section">
+                            <h2>象徵意義</h2>
+                            <p>隱者手持燈籠與拐杖，站在山頂上，象徵智慧之光與精神旅程中的引導與支撐。</p>
+                        </div>
+
+                        <div class="card-section">
+                            <h2>解讀建議</h2>
+                            <ul class="feature-list">
+                                <li>給自己獨處與思考的空間</li>
+                                <li>尋找內心真理與目標</li>
+                                <li>謹慎地做出決策</li>
+                                <li>不要害怕尋求指引</li>
+                            </ul>
+                        </div>
+
+                        <div class="card-section">
+                            <h2>關聯與連結</h2>
+                            <div class="card-associations">
+                                <div class="association-item">
+                                    <h3>元素</h3>
+                                    <p>土</p>
+                                </div>
+                                <div class="association-item">
+                                    <h3>星座</h3>
+                                    <p>處女座</p>
+                                </div>
+                                <div class="association-item">
+                                    <h3>數字</h3>
+                                    <p>9 - 智慧、完成、內在探索</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card-navigation-bottom">
+            <div class="container">
+                <div class="navigation-buttons">
+                    <a href="8.html" class="btn btn-outline">
+                        <span class="arrow-left"></span>
+                        力量
+                    </a>
+                    <a href="10.html" class="btn btn-outline">
+                        命運之輪
+                        <span class="arrow-right"></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; <span id="current-year">2025</span> UP兔YOU. 版權所有.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+            document.body.classList.toggle('menu-open');
+        });
+        document.querySelectorAll('.submenu-toggle').forEach(function(toggle) {
+            toggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                this.parentNode.classList.toggle('submenu-open');
+            });
+        });
+    </script>
+</body>
+</html>

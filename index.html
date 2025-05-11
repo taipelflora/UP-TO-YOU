@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UP兔YOU - 探索塔羅牌的神秘智慧</title>
+    <meta name="description" content="探索塔羅牌的神秘世界，了解塔羅牌的歷史、意義和解讀方式。">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.png" alt="UP兔YOU Logo" class="logo-image" />
+                    <span class="logo-text">UP兔YOU</span>
+                  </a>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="about.html">關於我們</a></li>
+                        <li><a href="tarot-introduction.html">塔羅介紹</a></li>
+                        <li><a href="tarot-meanings.html">塔羅牌義</a></li>
+                        <li><a href="landing.html">塔羅動畫</a></li>
+                    </ul>
+                </nav>
+                <div class="header-right">
+                    <div id="mini-tarot-reading" class="mini-tarot-reading">
+                        <button id="mini-reading-btn" class="btn btn-sm btn-outline">抽一張牌</button>
+                    </div>
+                    <button class="mobile-menu-toggle" aria-label="打開選單">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu">
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">首頁</a></li>
+                <li><a href="about.html">關於我們</a></li>
+                <li><a href="tarot-introduction.html">塔羅介紹</a></li>
+                <li><a href="tarot-meanings.html">塔羅牌義</a></li>
+                <li class="has-submenu">
+                    <a href="#" class="submenu-toggle">大阿爾卡納牌</a>
+                    <ul class="submenu">
+                        <li><a href="card/0.html">0. 愚者</a></li>
+                        <li><a href="card/1.html">1. 魔術師</a></li>
+                        <li><a href="card/2.html">2. 女祭司</a></li>
+                        <!-- 其他牌 -->
+                        <li><a href="tarot-meanings.html">查看全部</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>探索兔子塔羅的神秘世界</h1>
+                        <p>SLOGAN：進退如兔，智慧生存。</p>
+                        <div class="hero-buttons">
+                            <a href="tarot-meanings.html" class="btn btn-primary">探索塔羅牌義</a>
+                            <a href="about.html" class="btn btn-outline">了解更多</a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <!-- 塔羅牌抽排系統 -->
+                        <div id="tarot-reading-system" class="tarot-reading-container">
+                            <div class="tarot-reading-header">
+                                <h3>塔羅牌陣</h3>
+                                <div class="reading-controls">
+                                    <select id="spread-selector" class="spread-selector">
+                                        <option value="single">單張牌閱讀</option>
+                                        <option value="past-present-future">過去-現在-未來</option>
+                                        <option value="situation-obstacle-advice">情況-障礙-建議</option>
+                                    </select>
+                                    <button id="draw-cards-btn" class="btn btn-primary btn-sm">抽牌</button>
+                                </div>
+                            </div>
+                            <div id="reading-description" class="reading-description">
+                                選擇一種牌陣並點擊「抽牌」按鈕開始閱讀。
+                            </div>
+                            <div id="cards-container" class="cards-container">
+                                <!-- 牌陣將在這裡顯示 -->
+                            </div>
+                            <div id="reading-interpretation" class="reading-interpretation">
+                                <!-- 牌陣解釋將在這裡顯示 -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-cards">
+            <div class="container">
+                <div class="section-header">
+                    <h2>塔羅牌精選</h2>
+                    <p>探索大阿爾卡納牌組中最具代表性的幾張牌</p>
+                </div>
+                <div class="cards-grid">
+                    <a href="cards/0.html" class="card-item">
+                        <div class="card-image">
+                            <img src="images/00fool.jpg" alt="愚者">
+                        </div>
+                        <div class="card-overlay">
+                            <h3>愚者</h3>
+                        </div>
+                    </a>
+                    <a href="cards/1.html" class="card-item">
+                        <div class="card-image">
+                            <img src="images/01magician.jpg" alt="魔術師">
+                        </div>
+                        <div class="card-overlay">
+                            <h3>魔術師</h3>
+                        </div>
+                    </a>
+                    <a href="cards/2.html" class="card-item">
+                        <div class="card-image">
+                            <img src="images/02high-priestess.jpg" alt="女祭司">
+                        </div>
+                        <div class="card-overlay">
+                            <h3>女祭司</h3>
+                        </div>
+                    </a>
+                    <a href="cards/2.html" class="card-item">
+                        <div class="card-image">
+                            <img src="images/03empress.jpg" alt="女皇">
+                        </div>
+                        <div class="card-overlay">
+                            <h3>女皇</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="section-footer">
+                    <a href="tarot-meanings.html" class="btn btn-outline">查看全部塔羅牌義</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="tarot-history">
+            <div class="container">
+                <div class="two-columns">
+                    <div class="column">
+                        <h2>了解塔羅的起源與歷史</h2>
+                        <p>塔羅牌的歷史可以追溯到15世紀的歐洲，最初是作為紙牌遊戲使用，後來逐漸發展成為占卜和自我探索的工具。</p>
+                        <a href="tarot-introduction.html" class="btn btn-outline">閱讀更多</a>
+                    </div>
+                    <div class="column">
+                        <h3>塔羅牌的結構</h3>
+                        <p>傳統的塔羅牌組由78張牌組成，分為大阿爾卡納（22張）和小阿爾卡納（56張）。每張牌都有其獨特的象徵意義和解讀方式。</p>
+                        <ul class="feature-list">
+                            <li>大阿爾卡納：22張主要牌</li>
+                            <li>小阿爾卡納：56張分為四個花色</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; <span id="current-year">2025</span> UP兔YOU. 版權所有.</p>
+            <p>Concept & Structure by 紫米 / 2025</p>
+        </div>
+    </footer>
+
+    <script src="js/tarot-reading.js"></script>
+    <script>
+        // 設置當前年份
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // 行動選單切換
+        document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+            document.body.classList.toggle('menu-open');
+        });
+        
+        // 子選單切換
+        document.querySelectorAll('.submenu-toggle').forEach(function(toggle) {
+            toggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                this.parentNode.classList.toggle('submenu-open');
+            });
+        });
+        
+        // 迷你抽牌功能
+        document.getElementById('mini-reading-btn')?.addEventListener('click', function() {
+            const spreadSelector = document.getElementById('spread-selector');
+            if (spreadSelector) {
+                spreadSelector.value = 'single';
+                spreadSelector.dispatchEvent(new Event('change'));
+                document.getElementById('draw-cards-btn').click();
+                
+                // 滾動到抽牌區域
+                document.getElementById('tarot-reading-system').scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    </script>
+</body>
+</html>
+
