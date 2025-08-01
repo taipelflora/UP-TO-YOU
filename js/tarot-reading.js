@@ -76,7 +76,7 @@ const majorArcana = [
   {
     id: 10,
     name: "命運之輪",
-    file: "10wheel-of-fortune.webp",
+    file: "10wheel.webp",
     upright: "變化、命運、轉折、進步、機會",
     reversed: "壞運氣、阻力、打破循環、延遲",
   },
