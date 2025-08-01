@@ -13,7 +13,7 @@ const majorArcana = [
   { id: 7, name: "戰車", file: "07chariot.webp" },
   { id: 8, name: "力量", file: "08strength.webp" },
   { id: 9, name: "隱士", file: "09hermit.webp" },
-  { id: 10, name: "命運之輪", file: "10wheel-of-fortune.webp" },
+  { id: 10, name: "命運之輪", file: "10wheel.webp" },
   { id: 11, name: "正義", file: "11justice.webp" },
   { id: 12, name: "吊人", file: "12hanged-man.webp" },
   { id: 13, name: "死神", file: "13death.webp" },
