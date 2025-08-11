@@ -212,7 +212,7 @@ document.addEventListener("DOMContentLoaded", () => {
   slotElement.className = "tarot-card-slot"
   slotElement.innerHTML = `
     <div class="card-image-wrapper">
-      <img src="../images/webp/rabbit.webp"  class="card-back-image">
+      <img src="../images/rabbit.webp"  class="card-back-image">
     </div>
     <span class="slot-label">${position.name}</span>
     <span>UP兔YOU</span>
