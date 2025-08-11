@@ -1,6 +1,7 @@
 // 設置圖片基本路徑 - 根據您的需求修改
-const imagePath = location.pathname.includes("/card/") ? "../images/webp/" : "images/webp/";
-const assetsRoot = location.pathname.includes("/card/") ? "../images/" : "images/";
+const ROOT = location.pathname.includes("/cards/") ? "../" : "./";
+const imagePath  = `${ROOT}images/webp/`;   // 牌面圖片都放這裡
+const assetsRoot = `${ROOT}images/`;        // 牌背、其他素材
 
 
 // 大阿爾卡納牌組資料 - 使用您的自定義圖片
