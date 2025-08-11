@@ -1,5 +1,5 @@
 // 設置圖片基本路徑
-const imagePath = "../images/webp/"
+const imagePath = "../images/webp/rabbit.webp"
 
 // 大阿爾卡納牌組資料
 const majorArcana = [
